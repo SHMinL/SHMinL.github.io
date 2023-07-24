@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v3.0.6/css/line.css"
+    />
+    <!-- CSS源文件 -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <!-- 页面图标CSS -->
+    <link rel="stylesheet" href="assets/fonts/remixicon.css" />
+    <!--==================== 页面控制CSS ====================-->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>MingLBlog</title>
+  </head>
+  <body>
+    <!-- 导航栏实现 -->
+    <header class="header scroll-header" id="header">
+      <!-- 链接容器 -->
+      <nav class="nav container">
+        <!-- 链接的页面地址 -->
+        <a href="#" class="nav__logo">MingLBlog</a>
+        <!-- 菜单 -->
+        <div class="nav__menu" id="nav-menu">
+          <!-- 无序列表存放相应的组件 -->
+          <ul class="nav__list grid">
+            <!-- 个人简介页面 -->
+            <li class="nav__item">
+              <!-- 使用a标签链接到home类 -->
+              <a href="#home" class="nav__link">
+                <!-- 图标 -->
+                <i class="ri-home-3-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="home">Home</p>
+              </a>
+            </li>
+            <!-- 个人介绍界面 -->
+            <li class="nav__item">
+              <!-- 个人介绍 -->
+              <a href="#about" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-user-5-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="about">About</p>
+              </a>
+            </li>
+            <!-- 技能 -->
+            <li class="nav__item">
+              <!-- 链接地址 -->
+              <a href="#skills" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-briefcase-4-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="skills">Skills</p>
+              </a>
+            </li>
+            <!-- 常用工具 -->
+            <li class="nav__item">
+              <!-- 链接地址 -->
+              <a href="#tools" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-hammer-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="tools">Tools</p>
+              </a>
+            </li>
+            <!-- 个人资历 -->
+            <li class="nav__item">
+              <!-- 链接地址 -->
+              <a href="#qualification" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-profile-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="qualification">qualification</p>
+              </a>
+            </li>
+            <!-- 项目经历 -->
+            <li class="nav__item">
+              <!-- 链接地址 -->
+              <a href="#portfolio" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-profile-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="portfolio">Portfolio</p>
+              </a>
+            </li>
+            <!-- 个人爱好 -->
+            <li class="nav__item">
+              <!-- 链接地址 -->
+              <a href="#funny" class="nav__link">
+                <!-- 使用一个图标 -->
+                <i class="ri-user-heart-line nav__icon"></i>
+                <!-- 翻译标签 -->
+                <p i18n="funny">Funny</p>
+              </a>
+            </li>
+            <!-- 联系方式 -->
+            <li class="nav__item">
+              <!-- 这个是联系方式肯定要做比较大的改动 -->
+              <a href="#contact" class="nav__link">
+                <!-- 使用对应的网络上找到的标签 -->
+                <i class="ri-phone-line nav__icon"></i>
+                <!-- 给定翻译的对应标签 -->
+                <p i18n="contact">Contactme</p>
+              </a>
+            </li>
+            <!-- 页面翻译 -->
+            <li class="nav__item">
+              <div class="nav__link" id="translate" value="en">
+                <svg class="icon nav__icon-svg" aria-hidden="true">
+                  <!-- 使用icon-fanyi这个图标作为图片 -->
+                  <!-- <use>元素用于重复使用SVG图标 -->
+                  <use xlink:href="#icon-fanyi"></use>
+                </svg>
+                <!-- 显示按钮的功能并且链接到nav-link类 -->
+                <a class="=nav__link" id="nav__translate">
+                  <p>Translate</p>
+                </a>
+              </div>
+            </li>
+          </ul>
+          <!-- 关闭按钮 -->
+          <i class="ri-close-line nav__close" id="nav-close"></i>
+        </div>
+        <!-- 外部按钮 -->
+        <div class="nav__btns">
+          <!-- 主题按钮 -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+          <!-- 主题切换键 -->
+          <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-apps-line"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 导航栏部分结束 -->
+
+    <!-- 个人简介页面 -->
+    <main class="main">
+      <!-- 简介 -->
+      <section class="home section" id="home">
+        <!-- 网格布局容器 -->
+        <div class="home__container container grid">
+          <!-- 网格布局：个人站点 -->
+          <div class="home__content grid">
+            <!-- 主页main活动平台类的定义 -->
+            <div class="home__social">
+              <!-- 定义Github的对象-->
+              <!-- 相同的方法对于链接的地址定义 -->
+              <a
+                href="https://github.com/SHMinL"
+                target="_blank"
+                class="home__social-icon"
+              >
+              <!-- github对象 -->
+                <i class="ri-github-line"></i>
+              </a>
+              <!-- 定义BiliBili的对象 -->
+              <a
+                href="https://space.bilibili.com/499654441?spm_id_from=333.1007.0.0"
+                target="_blank"
+                class="home__social-icon"
+              >
+              <!-- 哔哩哔哩对象 -->
+              <i class="ri-bilibili-fill"></i>
+              </a>
+              <!-- 定义CSDN的对象 -->
+              <a
+                href="https://blog.csdn.net/m0_58081001?spm=1000.2115.3001.5343"
+                target="_blank"
+                class="home__social-icon"
+              >
+              <!-- CSDN对象 -->
+              <i class="ri-code-line"></i>
+              </a>
+              <!-- 定义知乎的对象 -->
+              <a
+                href="https://www.zhihu.com/people/---97-89-46"
+                target="_blank"
+                class="home__social-icon"
+              >
+              <!-- 知乎对象 -->
+              <i class="ri-zhihu-line"></i>
+              </a>
+            </div>
+            <!-- 主页 -->
+            <div class="home__img">
+              <svg
+                class="home__blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+              <!-- mask是一个遮盖的罩子 -->
+                <mask id="mask0" mask-type="alpha">
+                  <circle cx="100" cy="100" r="110" />
+                </mask>
+                <!-- <g>标签表示一个组合图形,它引用了mask0作为遮罩层 -->
+                <g mask="url(#mask0)">
+                  <!-- 第一个path定义了波浪的外形 -->
+                  <circle cx="100" cy="100" r="100" />
+                  <!-- <image>标签用来嵌入cat.png这张图片,并设置位于波浪图案的顶部 -->
+                  <image
+                    class="home__blob-img"
+                    x="0"
+                    y="-30"
+                    xlink:href="assets/img/miancat.png"
+                  />
+                </g>
+              </svg>
+            </div>
+            <!-- 主页面内容 -->
+            <div class="home__data">
+              <!-- 标题 -->
+              <h1 class="home__title" i18n="home__title">
+                Hi, I'm BigData Engineer
+              </h1>
+              <!-- 副标题 -->
+              <h3 class="home__subtitle" i18n="home__subtitle">
+                And Data Analyst
+              </h3>
+              <!-- 描述 -->
+              <p class="home__description" i18n="home__description">
+                Proficient in Big data technology and data analysis
+                , committed to generating value from data
+              </p>
+              <!-- 联系按钮 -->
+              <a href="#contact" class="button button-flex">
+                <!-- i18翻译 -->
+                <span i18n="home__contact">Contact Me</span>
+                <!-- 小飞机按钮 -->
+                <i class="ri-contacts-line button__icon"></i>
+              </a>
+            </div>
+          </div>
+
+          <!--下滑按钮组件-->
+          <div class="home__scroll">
+            <!-- 链接地址 -->
+            <a href="#about" class="home__scroll-button button--flex">
+              <!-- 图片标签 -->
+              <i class="ri-mouse-line home__scroll-mouse"></i>
+              <!-- 还是需要进行翻译的 -->
+              <span class="home__scroll-name" i18n="home__scroll-name"
+                >Scroll down</span
+              >
+              <i class="ri-skip-down-line home__scroll-arrow"></i>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- 个人介绍页面 -->
+      <section class="about section" id="about">
+        <!-- 详细介绍 -->
+        <h2 class="section__title" i18n="about__title">About Myself</h2>
+        <!--小标题-->
+        <span class="section__subtitle" i18n="about__subtitle"><h3>My introduction</h3></span>
+        <!-- 创建容器 -->
+        <div class="about__container container grid">
+          <!-- 先放入一张图片填充 -->
+          <img src="assets/img/ML.jpg" alt="" class="about__img" />
+          <!-- 对于内部内容的展示 -->
+          <!-- 这里还是多一些为好（或者后期进行继续填充） -->
+          <div class="about__data">
+            <p class="about__description" i18n="about__description">
+              Big data developers, 
+              responsible for data analysis and data development.
+              A fresh student with complete knowledge reserves and good development experience. 
+              Skilled in using data analysis tools and Big data ecosystem. 
+              Full of enthusiasm and vitality for work.
+            </p>
+            <!-- 工作三大类 -->
+            <div class="about__info">
+              <div>
+                <span class="about__info-title" i18n="about-info-year-number">01Year</span>
+                <span class="about__info-name" i18n="about__info-name1"
+                  >Years of <br />
+                  experience</span
+                >
+              </div>
+              <!-- 这里是工作的接手的项目 -->
+              <div>
+                <span class="about__info-title" i18n="about-info-profile-number">03Trems</span>
+                <span class="about__info-name" i18n="about__info-name2"
+                  >Completed <br />
+                  projects</span
+                >
+              </div>
+              <!-- 这里是工作公司 -->
+              <div>
+                <span class="about__info-title" i18n="about-info-company-number">01Family</span>
+                <span class="about__info-name" i18n="about__info-name3"
+                  >Companies <br />
+                  worked</span
+                >
+              </div>
+            </div>
+            <!-- 这里提供简历下载的功能，做好安全性，毕竟简历个人信息还是蛮多的 -->
+            <div class="about__buttons" id="download_button">
+              <!-- 提供下载链接的地址 -->
+              <a
+                href="#about"
+                class="button button--flex"
+              >
+              <!-- 使用i18进行翻译相关的工作 -->
+                <span i18n="download">Download and View Resume</span
+                ><i class="uil uil-download-alt button__icon"></i>
+              </a>
+            </div>
+            <script>
+                let downloadBtn = document.querySelector('#download_button');
+                downloadBtn.addEventListener('click', (e) => {
+                  e.preventDefault();
+                  showAlert(); 
+                });
+                function showAlert() {
+                  alert('当前网站为静态页面,不提供该功能!');
+
+                  // 或者使用自定义警告框
+                  const modal = document.createElement('div');
+                  modal.classList.add('modal');
+                  modal.innerHTML = '当前网站为静态页面,不提供该功能!';
+                  document.body.appendChild(modal);}
+            </script>
+          </div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#skills" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- 工作技能 -->
+      <section class="skills section" id="skills">
+        <h2 class="section__title" i18n="skills__title">Skills</h2>
+        <!-- 使用span -->
+        <span class="section__subtitle" i18n="skills__subtitle">My technical level</span>
+        <div class="skills__container container grid">
+            <!-- 数据分析能力 -->
+            <div class="skills__content skills__open">
+              <!-- 子类技能的名称 -->
+              <div class="skills__header">
+                <!-- 相关图标 -->
+                <i class="ri-line-chart-line skills__icon"></i>
+                <!-- 给这个技能的具体名称等等 -->
+                <div>
+                  <h1 class="skills__title" i18n="skill__subtitle">
+                    Data Analyze
+                  </h1>
+                </div>
+                <i class="ri-arrow-up-down-line skills__arrow"></i>
+              </div>
+            <!-- 数据分析技能 -->
+              <div class="skills__list grid">
+                <!-- 技能的数据 -->
+                <!-- 第一个技能 -->
+                <div class="skills__data">
+                  <!-- 技能的标题 -->
+                  <div class="skills__titles">
+                    <!-- 满足下面的格式进行添加 -->
+                    <h3 class="skills__name">SQL</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <div class="skills__percentage skills__sql"></div>
+                  </div>
+                </div>
+                <!-- 第二个技能 -->
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Scala</h3>
+                    <span class="skills__number">60%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <div class="skills__percentage skills__scala"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 这里也是一样的 -->
+            <div class="skills__content skills__close">
+              <div class="skills__header">
+                <i class="uil uil-server-network skills__icon"></i>
+                <div>
+                  <h1 class="skills__title" i18n="skills__title2">
+                    Backend developer
+                  </h1>
+                </div>
+                <i class="ri-arrow-up-down-line skills__arrow"></i>
+              </div>
+              <div class="skills__list grid">
+                <!-- 后端第一个技能 -->
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Java</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <div class="skills__percentage skills__java"></div>
+                  </div>
+                </div>
+                <!-- 后端第二个技能 -->
+                <div class="skills__data">
+                  <div class="skills__titles">
+                    <h3 class="skills__name">Python</h3>
+                    <span class="skills__number">80%</span>
+                  </div>
+                  <div class="skills__bar">
+                    <div class="skills__percentage skills__python"></div>
+                  </div>
+                </div>
+              <!-- 后端第三个技能 -->
+              <div class="skills__data">
+                <div class="skills__titles">
+                  <h3 class="skills__name">C++</h3>
+                  <span class="skills__number">50%</span>
+                </div>
+                <div class="skills__bar">
+                  <div class="skills__percentage skills__cpp"></div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#tools" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- 常用工具部分 -->
+      <section class="tools section" id="tools">
+        <h2 class="section__title" i18n="tools_title">Tools</h2>
+        <span class="section__subtitle" i18n="tools_title2">My commonly used tools</span>
+        <div class="tools_container container gird">
+          <div class="tools_box">
+              <h3 class="toolbox-title">Hadoop</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-hadoop">Master the construction of Hadoop environment, be familiar with the HDFS distributed file system, MapReduce distributed computing framework, and YARN resource scheduler, and be able to use Java programming MapReduce jobs</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Spark</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-spark">Understand the core idea of Spark, RDD, master cluster modes such as standalone and YARN, develop Spark SQL, Spark Streaming, and other tasks, understand transformation operations such as map and filter.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Flink</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-flink">Understand stream processing theory, master Flink runtime architecture and job submission, develop Flink SQL and DataStream jobs, and implement operators using Scala or Java APIs.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Hive</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-hive">Master the architecture components of Hive, proficiently use Hive SQL for data analysis on Hadoop, and understand Hive optimization methods.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Kafka</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-kafka">Understand Kafka architecture, master the use of themes, partitions, and producer/consumer APIs, and be familiar with Kafka high availability and scalability.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Redis</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-redis">Master Redis data structures such as strings, lists, collections, etc., implement basic operations of Redis, and understand Redis's implementation of distributed locking, caching, and other functions.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Numpy</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-numpy">Master numpy's multi-dimensional array object ndarray, be proficient in array operations, understand the broadcasting mechanism, and master the vectorization of operations between arrays.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Pandas</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-pandas">Proficient in Pandas Series and DataFrame objects, master Data cleansing and preparation, and make good use of groupby grouping, merging, RESHAPE and other functions.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Scikit-learn</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-sckit">learn about machine learning algorithms such as linear regression, Logistic regression, and decision tree, and use the scikit learn library to realize model training, evaluation, parameter adjustment, and prediction processes.</p>
+          </div>
+          <div class="tools_box">
+              <h3 class="toolbox-title">Tensorflow</h3>
+              <p class="toolbox-decribe" i18n="toolbox-decribe-tensorflow">Understand Tensorflow programming models, master the basic steps of building models, write model calculation diagrams, achieve forward propagation and reverse optimization, and complete model training and prediction.</p>
+          </div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#qualification" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+      <!-- 工作经验和校园经历部分 -->
+      <!-- 标题部分 -->
+      <section class="qualification section" id="qualification">
+        <h2 class="section__title" i18n="qualification__title">
+          Qualification
+        </h2>
+        <span class="section__subtitle" i18n="qualification__subtitle"
+          >My personal journey</span
+        >
+        <div class="qualification__container container">
+          <div class="qualification__tabs">
+            <div
+              class="qualification__button button--flex qualification__active"
+              data-target="#education"
+            >
+              <i class="uil uil-graduation-cap qualification__icon"></i>
+              <span i18n="education">Education</span>
+            </div>
+
+            <div class="qualification__button button--flex" data-target="#work">
+              <i class="uil uil-briefcase-alt qualification__icon"></i>
+              <span i18n="work">Work</span>
+            </div>
+          </div>
+          <div class="qualification__sections">
+            <!-- 教育经历1 -->
+            <div
+              class="qualification__content qualification__active"
+              data-content
+              id="education"
+            >
+              <!-- 教育经历 -->
+              <div class="qualification__data">
+                <div>
+                  <h3 class="qualification__title" i18n="qualification1__title">
+                    Computer Data Science and Big data Technology
+                  </h3>
+                  <span
+                    class="qualification__subtitle"
+                    i18n="qualification1__subtitle"
+                    >zhejiang university of technology</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2020 - 2024
+                  </div>
+                </div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+              </div>
+              <!-- 第二段经历 -->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                  <span class="qualification__line"></span>
+                </div>
+
+                <div>
+                  <h3 class="qualification__title" i18n="qualification2__title">
+                    Big data development
+                  </h3>
+                  <span
+                    class="qualification__subtitle"
+                    i18n="qualification2__subtitle"
+                    >Self Study</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2024--
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- 工作经历 -->
+            <div class="qualification__content" data-content id="work">
+              <!-- 经历 -->
+              <div class="qualification__data">
+                <div></div>
+                <div>
+                  <span class="qualification__rounder"></span>
+                <div>
+                  <h3 class="qualification__title" i18n="qualification4__title">
+                    找工作Ing
+                  </h3>
+                  <span
+                    class="qualification__subtitle"
+                    i18n="qualification4__subtitle"
+                    >HangZhou</span
+                  >
+                  <div class="qualification__calendar">
+                    <i class="uil uil-calendar-alt"></i>
+                    2022
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#portfolio" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+      <!-- 这里是项目经历部分 -->
+      <section class="portfolio section" id="portfolio">
+        <!-- 在这里是相关的标题 -->
+        <h2 class="section__title" i18n="portfolio__title">Portfolio</h2>
+        <!-- 需要翻译的页表标签元素 -->
+        <span class="section__subtitle" i18n="portfolio__subtitle"
+          >Most recent works</span
+        >
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <!-- 第一个项目部分 -->
+            <!-- 这里还是给一个相关的网格页面 -->
+            <div class="portfolio__content grid swiper-slide">
+              <!-- 选择相关的图片元素进行展现 -->
+              <img
+                src="assets/img/portfolio1.jpg"
+                alt=""
+                class="portfolio__img"
+              />
+              <!-- 定义这个项目介绍子元素中的内部内容 -->
+              <div class="portfolio_">
+                <!-- 在这里进行定义具体的项目需求部分 -->
+                <h3 class="portfolio__title" i18n="portfolio1__title">
+                  Coronary heart disease prediction system
+                </h3>
+                <!-- 在这里简要的介绍项目 -->
+                <p
+                  class="portfolio__description"
+                  i18n="portfolio1__description"
+                >
+                For coronary heart disease data set, Spark is used for Data cleansing and analysis, CNN, RNN, LSTM and other multiple models are used for training and verification, and multiple model cross validation and model fusion methods are used to optimize and improve the final accuracy. Generate a dataset using GAN model and optimize training to achieve the required accuracy of the most accurate results
+                </p>
+                <!-- 在这里给出项目的链接地址（这里需要进行改动：肯定是要进行项目具体的介绍和分工部分） -->
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Demo
+                  <!-- 这里是对于这个跳转的小箭头的展示 -->
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 第二个项目的定义 -->
+            <!-- 和第一个项目的定义方法是一样的 -->
+            <div class="portfolio__content grid swiper-slide">
+              <!-- 图片部分 -->
+              <img
+                src="assets/img/portfolio2.jpg"
+                alt=""
+                class="portfolio__img"
+              />
+              <!-- 标题部分 -->
+              <div class="portfolio_">
+                <h3 class="portfolio__title" i18n="portfolio2__title">
+                  Today's Headline Data Analysis
+                </h3>
+                <!-- 内容说明部分 -->
+                <p
+                  class="portfolio__description"
+                  i18n="portfolio2__description"
+                >
+                Data cleansing feature selection model building and other operations are performed for today's headline dataset. Ultimately, different data items can be accurately classified with an accuracy rate of 83%. Multiple models are used for comparison and hyperparameter adjustment to achieve the prediction function.
+                </p>
+                <!-- 项目链接的地址部分 -->
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  class="button button--flex button--small portfolio__button"
+                >
+                <!-- 这里是一样的：链接地址和具体链接的方法 -->
+                  Demo
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- 第三个项目 -->
+            <div class="portfolio__content grid swiper-slide">
+              <!-- 项目图片部分 -->
+              <img
+                src="assets/img/portfolio3.jpg"
+                alt=""
+                class="portfolio__img"
+              />
+              <!-- 项目内容简介 -->
+              <div class="portfolio_">
+                <!-- 项目标题 -->
+                <h3 class="portfolio__title" i18n="portfolio3__title">
+                  Data analysis of COVID-19 epidemic
+                </h3>
+                <!-- 项目介绍 -->
+                <p
+                  class="portfolio__description"
+                  i18n="portfolio3__description"
+                >
+                For the COVID-19 epidemic data, carry out visual analysis, clean the data and visualize the map, get relevant information, and then conduct combined analysis to finally get relevant conclusions.
+                </p>
+                <!-- 项目地址 -->
+                <a
+                  href="https://github.com/"
+                  target="_blank"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Demo
+                  <!-- 项目跳转的箭头部分 -->
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 新增项目的滑动的箭头部分 -->
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <!-- 新增项目的滑动的箭头部分 -->
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <!-- 给出一个新增页标的功能 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#funny" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+      <!-- 好玩的组件部分 -->
+      <section class="funny section" id="funny">
+        <h2 class="section__title" i18n="funny__title">Fun projects</h2>
+        <!-- 使用span -->
+        <span class="section__subtitle" i18n="funny__subtitle">Try some fun features online</span>
+        <div class="funny__container container grid">
+          <div class="funny_function">
+            <p i18n="function_describe">Features under development...</p>
+            <p><br></p>
+            <p><br></p>
+            <p><br></p>
+          </div>
+        </div>
+        <!--下滑按钮组件-->
+        <div class="home__scroll">
+          <!-- 链接地址 -->
+          <a href="#contact" class="home__scroll-button button--flex">
+            <!-- 图片标签 -->
+            <i class="ri-mouse-line home__scroll-mouse"></i>
+            <!-- 还是需要进行翻译的 -->
+            <span class="home__scroll-name" i18n="home__scroll-name"
+              >Scroll down</span
+            >
+            <i class="ri-skip-down-line home__scroll-arrow"></i>
+          </a>
+        </div>
+      </section>
+      <!-- "联系"相关页面 -->
+      <section class="contact section" id="contact">
+        <!-- 标题部分 -->
+        <h2 class="section__title" i18n="contact__title">Contact me</h2>
+        <!-- 内容部分 -->
+        <span class="section__subtitle" i18n="contact__subtitle"
+          >Get in touch</span
+        >
+        <!-- 添加联系方式的容器标签 -->
+        <div class="contact__container container grid">
+          <div>
+            <!-- 第一个信息块 -->
+            <div class="contact__information">
+              <!-- 电话的图标 -->
+              <i class="uil uil-phone-alt contact__icon"></i>
+              <!-- 信息 -->
+              <div>
+                <h3 class="contact__title" i18n="tel">Call me</h3>
+                <span class="contact__subtitle" i18n="tel__number"
+                  >19957898403</span
+                >
+              </div>
+            </div>
+            <!-- 第二个信息块 -->
+            <div class="contact__information">
+              <!-- 邮箱图标 -->
+              <i class="uil uil-envelope contact__icon"></i>
+              <!-- 信息 -->
+              <div>
+                <h3 class="contact__title" i18n="email">E-mail</h3>
+                <span class="contatc__subtitle" i18n="email__address"
+                  >minglshen@163.com</span
+                >
+              </div>
+            </div>
+            <!-- 第三个信息块 -->
+            <div class="contact__information">
+              <!-- 地址图标 -->
+              <i class="uil uil-map-marker contact__icon"></i>
+              <!-- 具体地址 -->
+              <div>
+                <h3 class="contact__title" i18n="location">Location</h3>
+                <span class="contatc__subtitle" i18n="location__detail"
+                  >HangZhou , CHINA</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 结束 -->
+    </main>
+
+    <!-- 最尾部的介绍界面 -->
+    <footer class="footer">
+      <!-- 尾部的背景 -->
+      <div class="footer__bg">
+        <!-- 创建尾部的容器给定相关的网格布局 -->
+        <div class="footer__container container grid">
+          <!-- 最后的介绍标签 -->
+          <div>
+            <h1 class="footer__title">MingLBlog</h1>
+          </div>
+          <!-- 跳转的地址 -->
+          <ul class="footer__links">
+            <!-- 地址1 -->
+            <li>
+              <a href="#skills" class="footer__link" i18n="skills">Skills</a>
+            </li>
+            <!-- 地址2 -->
+            <li>
+              <a href="#portfolio" class="footer__link" i18n="portfolio"
+                >Portfolio</a
+              >
+            </li>
+            <!-- 地址3 -->
+            <li>
+              <a href="#contact" class="footer__link" i18n="contact">Contact</a>
+            </li>
+          </ul>
+          <!-- 活动的平台部分 -->
+          <div class="footer__socials">
+            <!-- 定义Github的对象-->
+              <!-- 相同的方法对于链接的地址定义 -->
+              <a
+                href="https://github.com/SHMinL"
+                target="_blank"
+                class="icon footer__social"
+              >
+              <!-- github对象 -->
+                <i class="ri-github-line"></i>
+              </a>
+              <!-- 定义BiliBili的对象 -->
+              <a
+                href="https://space.bilibili.com/499654441?spm_id_from=333.1007.0.0"
+                target="_blank"
+                class="icon footer__social"
+              >
+              <!-- 哔哩哔哩对象 -->
+              <i class="ri-bilibili-fill"></i>
+              </a>
+              <!-- 定义CSDN的对象 -->
+              <a
+                href="https://blog.csdn.net/m0_58081001?spm=1000.2115.3001.5343"
+                target="_blank"
+                class="icon footer__social"
+              >
+              <!-- CSDN对象 -->
+              <i class="ri-code-line"></i>
+              </a>
+              <!-- 定义知乎的对象 -->
+              <a
+                href="https://www.zhihu.com/people/---97-89-46"
+                target="_blank"
+                class="icon footer__social"
+              >
+              <!-- 知乎对象 -->
+              <i class="ri-zhihu-line"></i>
+              </a>
+          </div>
+        </div>
+        <!-- 给出源代码地址 -->
+        <p class="footer__copy">
+          &#169; MingL.Copy from
+          <a
+            class="footer__copy"
+            href="https://www.youtube.com/c/Bedimcode"
+            target="_blank"
+            >Bedimcode</a
+          >
+        </p>
+      </div>
+    </footer>
+    <!-- 返回主页面的返回键 -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    <!-- 项目按钮切换的js -->
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <!-- 项目的背景切换js -->
+    <script src="assets/js/iconfont.js"></script>
+    <!-- 部分的动画 -->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <!-- 翻译按钮功能js -->
+    <script src="assets/js/jquery.i18n.min.js"></script>
+    <!-- 主函数js -->
+    <script src="assets/js/main.js"></script>
+    <!-- 翻译具体的实现js -->
+    <script src="assets/js/cn-en-translate.js"></script>
+  </body>
+</html>
